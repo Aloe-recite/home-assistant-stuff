@@ -6,7 +6,7 @@ card:
       conditions:
         - condition: state
           entity: input_boolean.lavatrice_terminata
-          state: "off"
+          state: "on"
       card:
         type: custom:bubble-card
         card_type: button
@@ -22,12 +22,14 @@ card:
             show_state: true
             show_icon: false
             show_background: false
+            state_background: false
             tap_action:
               action: none
           - entity: input_boolean.lavatrice_terminata
             name: Close
             icon: mdi:close
             show_background: true
+            state_background: false
             tap_action:
               action: toggle
         event_action:
@@ -43,13 +45,18 @@ card:
           tap_action:
             action: none
         styles: >-
+          .bubble-icon {
+            color: var(--primary-text-color) !important;
+            fill: var(--primary-text-color) !important; /* per SVG */
+          }
+
           .bubble-icon-container {
             background-color: rgba(60, 179, 113, 0.45) !important;
           }
 
           .bubble-container {
             background-color: var(--card-background-color, #fff) !important;
-            border: 1px solid #DDD;
+            border: 1px solid var(--ha-card-border-color,var(--divider-color,#e0e0e0));
           }
 
           .bubble-container:hover {
@@ -73,7 +80,7 @@ card:
       conditions:
         - condition: state
           entity: input_boolean.notifica_lavastoviglie_terminata
-          state: "off"
+          state: "on"
       card:
         type: custom:bubble-card
         card_type: button
@@ -89,12 +96,14 @@ card:
             show_state: true
             show_icon: false
             show_background: false
+            state_background: false
             tap_action:
               action: none
           - entity: input_boolean.notifica_lavastoviglie_terminata
             name: Close
             icon: mdi:close
             show_background: true
+            state_background: false
             tap_action:
               action: toggle
         event_action:
@@ -110,13 +119,17 @@ card:
           tap_action:
             action: none
         styles: >-
-          .bubble-icon-container {
+          .bubble-icon {
+            color: var(--primary-text-color) !important;
+            fill: var(--primary-text-color) !important; /* per SVG */
+          } .bubble-icon-container {
             background-color: rgba(60, 179, 113, 0.45) !important;
           }
 
           .bubble-container {
             background-color: var(--card-background-color, #fff) !important;
-            border: 1px solid #DDD;
+            border-radius: 9999px !important;            
+            border: 1px solid var(--ha-card-border-color,var(--divider-color,#e0e0e0));
           }
 
           .bubble-container:hover {
@@ -140,7 +153,7 @@ card:
       conditions:
         - condition: state
           entity: input_boolean.notifica_server
-          state: "off"
+          state: "on"
         - condition: state
           entity: binary_sensor.ups_non_su_rete
           state: "off"
@@ -166,6 +179,7 @@ card:
             show_state: true
             show_icon: false
             show_background: false
+            state_background: false
             tap_action:
               action: none
           - name: link
@@ -173,6 +187,7 @@ card:
             show_icon: true
             icon: mdi:magnify
             show_background: true
+            state_background: false
             tap_action:
               action: navigate
               navigation_path: /dashboard-mobile/server-rack
@@ -180,6 +195,7 @@ card:
             name: Close
             icon: mdi:close
             show_background: true
+            state_background: false
             tap_action:
               action: toggle
         event_action:
@@ -195,13 +211,18 @@ card:
           tap_action:
             action: none
         styles: >-
+          .bubble-icon {
+            color: var(--primary-text-color) !important;
+            fill: var(--primary-text-color) !important; /* per SVG */
+          }
+
           .bubble-icon-container {
             background-color: rgba(255, 152, 0, 0.65) !important;
           }
 
           .bubble-container {
             background-color: var(--card-background-color, #fff) !important;
-            border: 1px solid #DDD;
+            border: 1px solid var(--ha-card-border-color,var(--divider-color,#e0e0e0));
           }
 
           .bubble-container:hover {
@@ -225,7 +246,7 @@ card:
       conditions:
         - condition: state
           entity: binary_sensor.ups_non_su_rete
-          state: "off"
+          state: "on"
       card:
         type: custom:bubble-card
         card_type: button
@@ -250,6 +271,7 @@ card:
             icon: mdi:battery-50
             show_name: false
             show_background: false
+            state_background: false
             tap_action:
               action: none
           - name: Time on battery
@@ -266,6 +288,7 @@ card:
             show_icon: true
             icon: mdi:magnify
             show_background: true
+            state_background: false
             tap_action:
               action: navigate
               navigation_path: /dashboard-mobile/server-rack
@@ -282,13 +305,16 @@ card:
           tap_action:
             action: none
         styles: >-
-          .bubble-icon-container {
+          .bubble-icon {
+            color: var(--primary-text-color) !important;
+            fill: var(--primary-text-color) !important; /* per SVG */
+          } .bubble-icon-container {
             background-color: rgba(255, 152, 0, 0.65) !important;
           }
 
           .bubble-container {
             background-color: var(--card-background-color, #fff) !important;
-            border: 1px solid #DDD;
+            border: 1px solid var(--ha-card-border-color,var(--divider-color,#e0e0e0));
           }
 
           .bubble-container:hover {
@@ -326,7 +352,7 @@ card:
       conditions:
         - condition: state
           entity: binary_sensor.water_leak_lavanderia_water_leak
-          state: "off"
+          state: "on"
       card:
         type: custom:bubble-card
         card_type: button
@@ -349,6 +375,7 @@ card:
             show_state: true
             show_icon: false
             show_background: false
+            state_background: false
             tap_action:
               action: none
         event_action:
@@ -364,13 +391,16 @@ card:
           tap_action:
             action: none
         styles: >-
-          .bubble-icon-container {
+          .bubble-icon {
+            color: var(--primary-text-color) !important;
+            fill: var(--primary-text-color) !important; /* per SVG */
+          } .bubble-icon-container {
             background-color: rgba(255, 0, 0, 0.55) !important;
           }
 
           .bubble-container {
             background-color: var(--card-background-color, #fff) !important;
-            border: 1px solid #DDD;
+            border: 1px solid var(--ha-card-border-color,var(--divider-color,#e0e0e0));
           }
 
           .bubble-container:hover {
@@ -394,12 +424,16 @@ grid_options:
   columns: 24
   rows: auto
 card_mod:
-  style:
+  style: |
+    ha-card {
+      padding-top: 10px;
+    }
     hui-vertical-stack-card$: |
       hui-card {
         position: relative;
         border-radius: 20px;
         transition: all 0.3s ease;
+        border-radius: 9999px !important
       }
       /* Stacked (only when next card is visible) */
       hui-card:not([hidden]) ~ hui-card:not([hidden]) {
