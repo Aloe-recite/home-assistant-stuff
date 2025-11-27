@@ -425,8 +425,11 @@ grid_options:
   rows: auto
 card_mod:
   style: |
-    ha-card {
+    :host ha-card {
       padding-top: 10px;
+      padding-bottom: 5px;
+      background: none !important;
+      border: none !important;
     }
     hui-vertical-stack-card$: |
       hui-card {
